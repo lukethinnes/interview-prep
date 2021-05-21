@@ -8,6 +8,15 @@
 // State exists at a component level. It is then passed down.
 // The three staples of Redux are single source of truth, read-only state, and changes are made with pure functions.
 
+// LIFECYCLE METHODS
+// componentWillMount() – Executed just before rendering takes place both on the client as well as server-side.
+// componentDidMount() – Executed on the client side only after the first render.
+// componentWillReceiveProps() – Invoked as soon as the props are received from the parent class and before another render is called.
+// shouldComponentUpdate() – Returns true or false value based on certain conditions. If you want your component to update, return true else return false. By default, it returns false.
+// componentWillUpdate() – Called just before rendering takes place in the DOM.
+// componentDidUpdate() – Called immediately after rendering takes place.
+// componentWillUnmount() – Called after the component is unmounted from the DOM. It is used to clear up the memory spaces.
+
 //NOTES ON JS
 // The two pillars of JavaScript are protoypal inheritance and functional programming.
 // Inheritance is when you design types around what they are. Composition is designing types around what they do.
@@ -37,6 +46,8 @@ function mostRepeatedInt(arr) {
     return output
 }
 
+console.log(mostRepeatedInt([4, 6, 8,  7, 1, 13, 13, 13]))
+
 //Find a way to reverse a string without using the .reverse() method.
 
 function reverse(str) {
@@ -58,7 +69,7 @@ for(let i = 0; i<arr.length; i=i+2){
     }
 }
 }
-console.log(findMatch([9, 5, 7, 4, 9, 5, 4]))
+// console.log(findMatch([9, 5, 7, 4, 9, 5, 4]))
 
 //The legendary fizzbuzz...
 
@@ -86,7 +97,7 @@ function pallindrome(str){
 
 //Another possibility...
 
-funcrtion pal() {
+function pal() {
     for(let i = 0; i<str.length/2; i++){
         if(str[i] !== str[str.length - i - 1]){
             return false

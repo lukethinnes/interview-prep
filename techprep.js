@@ -1,3 +1,19 @@
+//NOTES ON REACT
+// The user interface library in React is "agnostic". It does not matter where the UI is displayed.
+// It does not care where the final components are sent as long as an adjacent library is attached. 
+// React does not become something like ReactDOM until it is passed into ReactDOM. Otherwise it is just JS.
+// Once again it is a library. This is different from a framework. It only includes enough functions for the agnostic library.
+// A component architecture is something like the Headers, body and footer.
+// Component trees exist, and there is only a one way data flow with React, such as App to Header/Content/Footer and below that, various JSX tags.
+// State exists at a component level. It is then passed down.
+// The three staples of Redux are single source of truth, read-only state, and changes are made with pure functions.
+
+//NOTES ON JS
+// The two pillars of JavaScript are protoypal inheritance and functional programming.
+// Inheritance is when you design types around what they are. Composition is designing types around what they do.
+// Pure functions are functions that will return the same result no matter what argument is passed.
+
+//PRACTICE ALGORITHMS
 //Find which integer is most repeated within an array of whole numbers.
 
 function mostRepeatedInt(arr) {

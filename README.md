@@ -1,3 +1,3 @@
 # Interview Prep
 
-A collection of some JavaScript algorithms completed in preparation for technical interviews.
+A collection of notes and JavaScript algorithms collected from a SkilledInc interview.

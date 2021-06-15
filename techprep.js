@@ -349,3 +349,17 @@ function countZeros(num) {
     }
     return count
 }
+
+//Create an NxN multiplication table...
+
+function multiplicationTable(size) {
+    output = []
+    for (let i = 1; i <= size; i++) {
+        container = []
+        output.push(container)
+        for (let j = 1; j <= size; j++) {
+        container.push(i * j)
+        }
+    }
+    return output
+}

@@ -146,6 +146,8 @@
 
 // This is the final phase of a component’s life cycle in which the component is destroyed and removed from the DOM.
 
+<<<<<<< HEAD
+=======
  
 
 
@@ -165,6 +167,7 @@
 
 // componentWillUnmount() – Called after the component is unmounted from the DOM. It is used to clear up the memory spaces.
 
+>>>>>>> 1ca00515ff4e524cdefa72b4600fc959e9b1589c
 
 
 // HOOKS
@@ -259,7 +262,7 @@ function mostRepeatedInt(arr) {
     return output
 }
 
-console.log(mostRepeatedInt([4, 6, 8,  7, 1, 13, 13, 13]))
+// console.log(mostRepeatedInt([4, 6, 8,  7, 1, 13, 13, 13]))
 
 //Find a way to reverse a string without using the .reverse() method.
 
@@ -362,4 +365,18 @@ function multiplicationTable(size) {
         }
     }
     return output
+    
+// Find out how many times a character appears in a string. Only include alphanumeric characters.
+
+function charCount(str) {
+    var result = {}
+    for(let i = 0; i <= str.length; i++){
+        var char = str[i].toLowerCase()
+        if(result[char] > 0){
+            result[char]++
+        } else {
+            result[char] = 1
+        }
+    }
+return result
 }

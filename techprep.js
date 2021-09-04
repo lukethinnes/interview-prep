@@ -146,11 +146,6 @@
 
 // This is the final phase of a component’s life cycle in which the component is destroyed and removed from the DOM.
 
-<<<<<<< HEAD
-=======
- 
-
-
 // LIFECYCLE METHODS
 
 // componentWillMount() – Executed just before rendering takes place both on the client as well as server-side.
@@ -166,8 +161,6 @@
 // componentDidUpdate() – Called immediately after rendering takes place.
 
 // componentWillUnmount() – Called after the component is unmounted from the DOM. It is used to clear up the memory spaces.
-
->>>>>>> 1ca00515ff4e524cdefa72b4600fc959e9b1589c
 
 
 // HOOKS
@@ -367,3 +360,25 @@ function charCount(str) {
     }
 return result
 }
+
+// Check if two strings are anagrams of one another
+
+function anagrams (str1, str2) {
+  if (str1.length !== str2.length) {
+    return false
+  }
+  let results = {}
+  for (let i = 0; i < str1.length; i++) {
+    let letter = str1[i]
+    results[letter] ? results[letter] += 1 : results[letter] = 1
+  } 
+  for (let i = 0; i < str2.length; i++) {
+    let letter = str2[i]
+    if(!results[letter]) {
+      return false;
+    }
+  }
+  return true 
+}
+
+

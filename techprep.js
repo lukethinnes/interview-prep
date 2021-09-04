@@ -394,4 +394,19 @@ function anagrams (str1, str2) {
   return true 
 }
 
+// Compare two strings to each other and find which words are missing
 
+function missingWords(str1, str2) {
+  let output = []
+  let x = str1.split(' ')
+  let y = str2.split(' ')
+
+  for (let i = 0, j = 0; i < str1.length; i++) {
+    if(x[i] !== y[j]) {
+      output.push(x[i])
+    } else {
+      j++
+    }
+  }
+  return output
+}

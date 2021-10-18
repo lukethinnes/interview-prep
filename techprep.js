@@ -374,7 +374,30 @@ function charCount(str) {
 return result
 }
 
-// Check if two strings are anagrams of one another
+// An anagram checker.
+function anagram(arr1, arr2) {
+    let sortArr1 = arr1.split('').sort((a, b) => a-b)
+    let sortArr2 = arr2.split('').sort((a, b) => a-b)
+    let catcher1 = {}
+    let catcher2 = {}
+    if (arr1.length !== arr2.length) {
+        return false;
+    }
+    for (let val of sortArr1) {
+        catcher1[val] = (sortArr1[val] || 0) + 1
+    }
+    for (let val of sortArr2) {
+        catcher2[val] = (sortArr1[val] || 0) + 1
+    }
+    for (let key in catcher1) {
+        if (catcher2[key] !== catcher1[key]) {
+            return false
+        }
+    }
+    return true
+}
+
+//  Another solution, refactored to only use one object.
 
 function anagrams (str1, str2) {
   if (str1.length !== str2.length) {

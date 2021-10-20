@@ -471,3 +471,21 @@ function countUnique(arr) {
     return result.length
 } 
 
+//Finding the max sum of a given number of integers in an array. (not the best solution!!)
+
+function subrraySum(array, number) {
+  if (number > array.length) {
+    return null
+  }
+  var max = -Infinity
+  for (let i = 0; i < array.length - number + 1; i++) {
+    temp = 0;
+    for (let j = 0; j < number; j++) {
+      temp += array[i + j]
+    }
+    if (temp > max) {
+      max = temp
+    }
+  }
+  return max
+}

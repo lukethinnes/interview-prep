@@ -458,3 +458,16 @@ function same(arr1, arr2) {
   }
   return true
 }
+
+// Count the number of unique values in a sorted array
+//
+function countUnique(arr) {
+    let result = []
+    for(let i = 0; i < arr.length; i++) {
+        if (arr[i] !== arr[i+1]) {
+            result.push(arr[i])
+        }
+    }
+    return result.length
+} 
+

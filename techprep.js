@@ -489,3 +489,28 @@ function subrraySum(array, number) {
   }
   return max
 }
+
+// Refactored...
+
+function maxSubSum(array, number) {
+  let maxSum = 0
+  let tempSum = 0
+  if (array.length < number) return null
+  for ( let i = 0; i < number; i++) {
+    maxSum += array[i]
+  }
+  tempSum = maxSum
+  for (let i = number; i < array.length; i++) {
+    tempSum = tempSum - array[i - number] + arr[i]
+    maxSum = Math.max(maxSum, tempSum)
+  }
+  return maxSum
+}
+
+// Given two positive integers, find out if they have the same frequency of digits.
+
+function sameFrequency(num1, num2) {
+  return (num1.toString().split('').sort((a, b) => a-b).join('') 
+    === num2.toString().split('').sort((a, b) => a-b).join('')
+  )
+}

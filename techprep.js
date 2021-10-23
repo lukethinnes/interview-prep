@@ -514,3 +514,13 @@ function sameFrequency(num1, num2) {
     === num2.toString().split('').sort((a, b) => a-b).join('')
   )
 }
+
+// Fibonacci index written recursively.
+
+function fibseq(int) {
+    if(int >= 3) {
+        return fibseq(int-2) + fibseq(int-1)
+    } else {
+        return 1
+    }
+} 

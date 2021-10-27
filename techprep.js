@@ -558,3 +558,9 @@ function collectOddValues(arr) {
   return newArr
 }
 
+// Find the product of an array using recursion...
+
+function productOfArray(arr) {
+    if (arr.length === 0) return 1
+    return arr[0] * productOfArray(arr.slice(1))
+}

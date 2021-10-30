@@ -564,3 +564,10 @@ function productOfArray(arr) {
     if (arr.length === 0) return 1
     return arr[0] * productOfArray(arr.slice(1))
 }
+
+// Reverse a string using recursion.
+
+function reverse(string) {
+  if(string.length <= 1) return string
+  return reverse(string.slice(1)) + string[0]
+}

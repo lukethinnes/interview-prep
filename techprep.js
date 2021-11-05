@@ -571,3 +571,14 @@ function reverse(string) {
   if(string.length <= 1) return string
   return reverse(string.slice(1)) + string[0]
 }
+
+// Capitalize each word in an array using recursion.
+
+function capitalizeWords (array) {
+  if (array.length === 1) {
+    return [array[0].toUpperCase()]
+  }
+  let result = capitalizeWords(array.slice(0, -1))
+  result.push(array.slice(array.length-1)[0].toUpperCase())
+  return result
+}

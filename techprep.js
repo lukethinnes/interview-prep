@@ -564,3 +564,13 @@ function productOfArray(arr) {
     if (arr.length === 0) return 1
     return arr[0] * productOfArray(arr.slice(1))
 }
+
+// A linear search algorithm for determining the frequency of a value in an array.
+// Solution may not use the indexOf() method!
+
+function linearSearch(array, value) {
+    for (var i = 0; i < array.length; i++) {
+        if(array[i] === value) return i
+    }
+    return -1
+}

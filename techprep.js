@@ -524,6 +524,19 @@ function fibseq(int) {
         return 1
     }
 } 
+// Flatten an array using recursion...
+
+function flatten(oldArr){
+  var newArr = []
+  	for(var i = 0; i < oldArr.length; i++){
+    	if(Array.isArray(oldArr[i])){
+      		newArr = newArr.concat(flatten(oldArr[i]))
+    	} else {
+      		newArr.push(oldArr[i])
+    	}
+  } 
+  return newArr;
+}
 
 // Using a helper method with recursion to collect all odd values from an array.
 
@@ -565,15 +578,6 @@ function productOfArray(arr) {
     return arr[0] * productOfArray(arr.slice(1))
 }
 
-// A linear search algorithm for determining the frequency of a value in an array.
-// Solution may not use the indexOf() method!
-
-function linearSearch(array, value) {
-    for (var i = 0; i < array.length; i++) {
-        if(array[i] === value) return i
-    }
-    return -1
-
 // Reverse a string using recursion.
 
 function reverse(string) {
@@ -591,3 +595,13 @@ function capitalizeWords (array) {
   result.push(array.slice(array.length-1)[0].toUpperCase())
   return result
 }
+
+// A linear search algorithm for determining the frequency of a value in an array.
+// Solution may not use the indexOf() method!
+
+function linearSearch(array, value) {
+    for (var i = 0; i < array.length; i++) {
+        if(array[i] === value) return i
+    }
+    return -1
+
